@@ -2,6 +2,8 @@ import { useState } from 'react';
 import MaterialList from './components/MaterialList';
 import AddMaterialForm from './components/AddMaterialForm';
 
+import './App.css';
+
 const App = () => {
   const [materials, setMaterials] = useState([]);
 
