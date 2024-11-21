@@ -1,11 +1,21 @@
-import React from 'react'
+import MaterialItem from './MaterialItem';
 
-const MaterialList = () => {
+const MaterialList = ({ materials, removeMaterial }) => {
   return (
-    <div>MaterialList</div>
-  )
-}
+    <div>
+      {materials.length > 0 ? (
+        materials.map((material) => (
+          <MaterialItem
+            key={material.id}
+            material={material}
+            removeMaterial={removeMaterial}
+          />
+        ))
+      ) : (
+        <p>No hay materiales registrados.</p>
+      )}
+    </div>
+  );
+};
 
-export default MaterialList
-
-
+export default MaterialList;
